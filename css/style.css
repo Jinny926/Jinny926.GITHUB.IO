@@ -44,8 +44,17 @@ h4 {
 }
 .thumbnail img {
     width: 100%;
-    height: 100%;
+    height: 220px;        /* ⭐ 원하는 높이로 고정 */
+    object-fit: cover;   /* ⭐ 비율 유지 + 잘라서 맞춤 */
     margin-bottom: 10px;
+}
+#portfolio .row {
+  max-width: 900px;   /* 원하는 폭 */
+  margin: 0 auto;      /* 가운데 정렬 */
+}
+#pricing .row {
+  max-width: 900px;   /* 원하는 폭 */
+  margin: 0 auto;      /* 가운데 정렬 */
 }
 .carousel-control.right, .carousel-control.left {
     background-image: none;
@@ -163,7 +172,7 @@ footer .glyphicon {
 @media screen and (max-width: 768px) {
     .col-sm-4 {
         text-align: center;
-        margin: 25px 0;
+        margin: 20px 0;
     }
     .btn-lg {
         width: 100%;
@@ -174,4 +183,19 @@ footer .glyphicon {
     .logo {
         font-size: 150px;
     }
+}
+/* ===== 사진만 둥글게 ===== */
+
+/* About 섹션 사진 (쌍둥이 루나) */
+#about img {
+  width: 220px;        /* ⭐ 크기 조절 (180~240 추천) */
+  height: auto;        /* 비율 유지 */
+  border-radius: 16px; /* 둥글게 */
+  display: block;
+  margin: 0 auto;      /* 가운데 정렬 */
+}
+
+/* Portfolio 썸네일 사진들 */
+.thumbnail img {
+  border-radius: 12px;
 }
